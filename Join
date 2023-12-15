@@ -1,0 +1,45 @@
+--select *
+--from [SQL Tutorial].dbo.EmployeeDemographics
+
+--select *
+--from [SQL Tutorial].dbo.EmployeeSalary
+
+--select *
+--from [SQL Tutorial].dbo.EmployeeDemographics
+--inner join [SQL Tutorial].dbo.EmployeeSalary
+--	on EmployeeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+--	here this is AnB
+
+--select *
+--from [SQL Tutorial].dbo.EmployeeDemographics
+--Full Outer Join [SQL Tutorial].dbo.EmployeeSalary
+--	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--select *
+--from [SQL Tutorial].dbo.EmployeeDemographics
+--Left Outer Join [SQL Tutorial].dbo.EmployeeSalary
+--	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+--select *
+--from [SQL Tutorial].dbo.EmployeeDemographics
+--Right Outer Join [SQL Tutorial].dbo.EmployeeSalary
+--	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+--select EmployeeSalary.EmployeeID, FirstName, LastName, Salary
+--from [SQL Tutorial].dbo.EmployeeDemographics
+--left Outer Join [SQL Tutorial].dbo.EmployeeSalary
+--	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+--select EmployeeSalary.EmployeeID, FirstName, LastName, Salary
+--from [SQL Tutorial].dbo.EmployeeDemographics
+--Inner Join [SQL Tutorial].dbo.EmployeeSalary
+--	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--where FirstName <> 'Michael'
+--order by  Salary desc
+
+
+select JobTitle,avg(Salary)
+from [SQL Tutorial].dbo.EmployeeDemographics
+Inner Join [SQL Tutorial].dbo.EmployeeSalary
+	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+where JobTitle='Salesman'
+group by JobTitle
