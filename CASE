@@ -1,0 +1,54 @@
+/*
+* CASE STATEMENT
+*/
+
+Select FirstName, LastName,Age,
+CASE 
+  WHEN Age=38 then 'name'
+	WHEN Age>30 then 'old'
+	WHEN Age BETWEEN 27 AND 30 then 'Young'
+	ELSE 'BABY'
+END
+from [SQL Tutorial].dbo.EmployeeDemographics
+where age is not null
+order by age
+
+
+/*
+* CASE STATEMENT
+*/
+
+Select FirstName, lastname, jobTitle, Salary,
+CASE 
+	WHEN JobTitle='Salesman' then Salary+(Salary*.10)
+	WHEN JobTitle='Accountant' then Salary+(Salary*.05)
+	WHEN JobTitle='HR' then Salary+(Salary*.03)
+	ELSE Salary+(Salary*.01)
+	END
+from [SQL Tutorial].dbo.EmployeeDemographics
+JOIN [SQL Tutorial].dbo.EmployeeSalary
+on EmployeeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+
+/*
+* HAVING CLAUSE
+*/
+
+Select JobTitle, count(JobTitle)
+from [SQL Tutorial].dbo.EmployeeDemographics
+JOIN [SQL Tutorial].dbo.EmployeeSalary
+	on EmployeeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+GROUP BY JobTitle
+HAVING COUNT(JobTitle) >1
+
+
+/*
+* HAVING CLAUSE
+*/
+
+Select JobTitle, avg(Salary)
+from [SQL Tutorial].dbo.EmployeeDemographics
+JOIN [SQL Tutorial].dbo.EmployeeSalary
+	on EmployeeDemographics.EmployeeID=EmployeeSalary.EmployeeID
+GROUP BY JobTitle
+HAVING avg(Salary) >45000
+order by avg(Salary)
