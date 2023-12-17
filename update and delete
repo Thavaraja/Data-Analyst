@@ -1,0 +1,28 @@
+update [SQL Tutorial].[dbo].[EmployeeDemographics]
+set EmployeeID=1012
+where FirstName ='Holly' and LastName ='Flax'
+
+select *
+from [SQL Tutorial].[dbo].[EmployeeDemographics]
+
+update [SQL Tutorial].[dbo].[EmployeeDemographics]
+set Age=40, Gender ='male'
+where FirstName ='Holly' and LastName ='Flax'
+
+
+Delete from [SQL Tutorial].[dbo].[EmployeeDemographics]
+where EmployeeID=1005
+
+steps by steps we need to delete
+first select that row
+select *
+from [SQL Tutorial].[dbo].[EmployeeDemographics]
+where EmployeeID=1004
+
+Delete that row
+Delete from [SQL Tutorial].[dbo].[EmployeeDemographics]
+where EmployeeID=1004
+
+check the table
+select *
+from [SQL Tutorial].[dbo].[EmployeeDemographics]
