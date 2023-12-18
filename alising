@@ -1,2 +1,16 @@
 select FirstName as Fname
 from [SQL Tutorial].[dbo].[EmployeeDemographics]
+
+cloumn change
+select FirstName +' '+LastName as FullName
+from [SQL Tutorial].[dbo].[EmployeeDemographics]
+
+Table name change
+select Demo.EmployeeID
+from [SQL Tutorial].[dbo].[EmployeeDemographics] as Demo
+
+Table name change
+select Demo.EmployeeID, Demo1.Salary
+from [SQL Tutorial].[dbo].[EmployeeDemographics] as Demo
+Join [SQL Tutorial].[dbo].[EmployeeSalary] as Demo1
+on Demo.EmployeeID=Demo1.EmployeeID
