@@ -10,4 +10,26 @@ WHERE Salary>'50000'
 )
 Select *
 From  CTE_Employee
+.......................................................................
+-- Temp Tables
+CREATE TABLE #temp_Employee (
+EmployeeID int,
+JobTitle varchar(50),
+Salary int
+)
 
+Select *
+FROM #temp_Employee
+
+INSERT INTO #temp_Employee VALUES(
+1100,'HR',45000)
+
+Select *
+FROM #temp_Employee
+--THIS IS GOOD USE
+INSERT INTO #temp_Employee 
+SELECT *
+FROM [SQL Tutorial]..EmployeeSalary
+
+Select *
+FROM #temp_Employee
