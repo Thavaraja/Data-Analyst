@@ -1,0 +1,13 @@
+--CTEs
+WITH CTE_Employee as 
+(select FirstName, LastName, Gender, Salary, 
+count(Gender) over (Partition by Gender) totalgender
+, AVG(Salary) over(Partition by Gender) AvgSalary
+from [SQL Tutorial]..[EmployeeDemographics] Demo
+Join [SQL Tutorial]..[EmployeeSalary] Demo1
+on Demo.EmployeeID=Demo1.EmployeeID
+WHERE Salary>'50000'
+)
+Select *
+From  CTE_Employee
+
