@@ -1,0 +1,113 @@
+Variables in Python
+x = 22
+
+print(x)
+22
+type(x)
+int
+y = 'Mint Chocolate Chip'
+
+print(y)
+Mint Chocolate Chip
+type(y)
+str
+# Case Sensitivity
+
+y = 'Chocolate'
+
+Y = 'Mint Chocolate Chip'
+
+print(Y)
+
+Mint Chocolate Chip
+#Assign multiple values to multiple variables
+
+x,y,z = 'Chocolate', 'Vanilla', 'Rocky Road'
+
+print(x)
+print(y)
+print(z)
+Chocolate
+Vanilla
+Rocky Road
+#Assign one value to multiple variables
+
+x = y = z = 'Root Beer Float'
+
+print(x)
+print(y)
+print(z)
+Root Beer Float
+Root Beer Float
+Root Beer Float
+ice_cream = ['Chocolate', 'Vanilla', 'Rocky Road']
+
+x,y,z = ice_cream
+
+print(x)
+print(y)
+print(z)
+Chocolate
+Vanilla
+Rocky Road
+# Camel Case
+
+#Test Variable Case
+testVariableCase = 'Vanilla Swirl'
+# Pascal Case
+
+#Test Variable Case
+
+TestVariableCase = 'Vanilla Swirl'
+# Snake Case
+
+#Test Variable Case
+
+test_variable_case = 'Vanilla Swirl'
+#Good ways to write variables
+
+testvar = 'Vanilla Swirl'
+test_var = 'Vanilla Swirl'
+_test_var = 'Vanilla Swirl'
+testVar = 'Vanilla Swirl'
+TestVar = 'Vanilla Swirl'
+testVar2 = 'Vanilla Swirl'
+#Bad ways to write variables
+
+2testVar = 'Vanilla Swirl'
+test-Var2 = 'Vanilla Swirl'
+test Var2 = 'Vanilla Swirl'
+test,Var2 = 'Vanilla Swirl'
+x = 'Ice Cream is my favorite' + 2
+
+print(x)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Input In [19], in <cell line: 1>()
+----> 1 x = 'Ice Cream is my favorite' + 2
+      3 print(x)
+
+TypeError: can only concatenate str (not "int") to str
+y = 3 + 2
+
+print(y)
+5
+x = 'Ice Cream'
+y = ' is'
+z = ' my favorite.'
+
+print(x+y+z)
+
+Ice Cream is my favorite.
+x = 1
+y = 2
+z = 3
+
+print(x+y+z)
+6
+x = 'Ice Cream'
+y = 2
+
+
+print(x,y)
+Ice Cream 2
